@@ -1,0 +1,39 @@
+{
+  "name": "performance-data-server",
+  "version": "0.0.1",
+  "description": "Server | Performance Data Monitor",
+  "main": "./src/server.ts",
+  "scripts": {
+    "prebuild": "rimraf ./build",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "server": "node ./build/server.js",
+    "server:watch": "nodemon ./build/server.js",
+    "start": "run-s build server",
+    "dev": "run-p build:watch server:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Anik7303/socketio-performance-data.git"
+  },
+  "keywords": [
+    "OS",
+    "Socket.io",
+    "Websocket"
+  ],
+  "author": "Anik Mohammad <anik7303@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/Anik7303/socketio-performance-data/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.13",
+    "nodemon": "^2.0.19",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2",
+    "socket.io": "^4.5.1"
+  },
+  "license": "MIT"
+}
