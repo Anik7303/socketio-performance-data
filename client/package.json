@@ -1,0 +1,42 @@
+{
+  "name": "performance-data-client",
+  "version": "0.0.1",
+  "description": "Node Client | Performance Data Monitor",
+  "main": "./src/index.ts",
+  "scripts": {
+    "prebuild": "rimraf ./build",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "server": "node ./build/index.js",
+    "server:watch": "nodemon ./build/index.js",
+    "start": "run-s build server",
+    "dev": "run-p build:watch server:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Anik7303/socketio-performance-data.git"
+  },
+  "keywords": [
+    "OS",
+    "Node",
+    "Socket.IO",
+    "WebSocket"
+  ],
+  "author": {
+    "name": "Anik Mohammad",
+    "email": "anik7303@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Anik7303/socketio-performance-data/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.13",
+    "nodemon": "^2.0.19",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.5.1"
+  },
+  "license": "MIT"
+}
